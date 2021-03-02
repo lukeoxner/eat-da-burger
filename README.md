@@ -12,7 +12,7 @@ For this project, I was to build a full-stack app that allows a user to enter an
 
 The code (and associated assets) are hosted right here in this GitHub repository, and it's all live on the web thanks to Heroku. If you would like to check it out, you can view the site at the link below:
 
-<a href="" target="_blank"><b>eat-da-burger Live App</b></a>
+<a href="https://boiling-retreat-85860.herokuapp.com/" target="_blank"><b>eat-da-burger Live App</b></a>
 <br><br>
 
 ## Credits
