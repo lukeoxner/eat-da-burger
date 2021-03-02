@@ -3,22 +3,30 @@ const connection = require('./connection.js');
 
 // setting up the object relational mapping (ORM)
 const orm = {
-	selectAll(table, cb) {
-		const queryString = `SELECT * FROM ${table}`;
+	selectAll(cb) {
+		const queryString = 'SELECT * FROM burgers';
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
 	},
-	insertOne(table, vals, cb) {
-		const queryString = `INSERT INTO ${table} (burger_name, devoured) VALUES (?, ?)`;
+	insertOne(vals, cb) {
+		const queryString =
+			'INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)';
 
 		connection.query(queryString, vals, (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
 	},
-	updateOne() {},
+	updateOne(devoured, id, cb) {
+		let queryString = 'UPDATE burgers SET devoured = ? WHERE id = ?';
+
+		connection.query(queryString, [devoured], (err, result) => {
+			if (err) throw err;
+			cb(result);
+		});
+	},
 };
 
 module.exports = orm;
