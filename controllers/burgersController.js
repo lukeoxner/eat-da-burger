@@ -12,7 +12,11 @@ router.get('/', (req, res) => {
 	});
 });
 
-router.post();
+router.post('/api/burgers', (req, res) => {
+	burger.insertOne([req.body.burger_name, req.body.devoured], (result) => {
+		res.json({ id: result.insertId });
+	});
+});
 
 router.put();
 
