@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		changeDevouredBtns.forEach((button) => {
 			button.addEventListener('click', (e) => {
 				const id = e.target.getAttribute('data-id');
-				const newDevoured = e.target.getAttribute('data-newdevoured');
 
 				const newDevouredState = {
-					devoured: newDevoured,
+					devoured: true,
 				};
 
 				fetch(`/api/burgers/${id}`, {
