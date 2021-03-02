@@ -3,7 +3,7 @@ const connection = require('./connection.js');
 
 // setting up the object relational mapping (ORM)
 const orm = {
-	selectAll() {},
+	selectAll(table, cb) {},
 	insertOne() {},
 	updateOne() {},
 };
