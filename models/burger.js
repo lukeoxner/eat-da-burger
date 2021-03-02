@@ -8,8 +8,8 @@ const burger = {
 	insertOne(vals, cb) {
 		orm.create(vals, (res) => cb(res));
 	},
-	updateOne(vals, id, cb) {
-		orm.update(vals, id, (res) => cb(res));
+	updateOne(devoured, id, cb) {
+		orm.update(devoured, id, (res) => cb(res));
 	},
 };
 
