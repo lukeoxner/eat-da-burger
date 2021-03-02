@@ -3,13 +3,13 @@ const orm = require('../config/orm.js');
 
 const burger = {
 	selectAll(cb) {
-		orm.all((res) => cb(res));
+		orm.selectAll((res) => cb(res));
 	},
 	insertOne(vals, cb) {
-		orm.create(vals, (res) => cb(res));
+		orm.insertOne(vals, (res) => cb(res));
 	},
 	updateOne(devoured, id, cb) {
-		orm.update(devoured, id, (res) => cb(res));
+		orm.updateOne(devoured, id, (res) => cb(res));
 	},
 };
 
