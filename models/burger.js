@@ -5,8 +5,8 @@ const burger = {
 	selectAll(cb) {
 		orm.selectAll((res) => cb(res));
 	},
-	insertOne(vals, cb) {
-		orm.insertOne(vals, (res) => cb(res));
+	insertOne(name, cb) {
+		orm.insertOne(name, (res) => cb(res));
 	},
 	updateOne(devoured, id, cb) {
 		orm.updateOne(devoured, id, (res) => cb(res));

@@ -10,11 +10,11 @@ const orm = {
 			cb(result);
 		});
 	},
-	insertOne(vals, cb) {
+	insertOne(name, cb) {
 		const queryString =
-			'INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)';
+			'INSERT INTO burgers (burger_name, devoured) VALUES (?, false)';
 
-		connection.query(queryString, vals, (err, result) => {
+		connection.query(queryString, name, (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
