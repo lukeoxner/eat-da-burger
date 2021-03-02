@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	if (createBurgerBtn) {
 		createBurgerBtn.addEventListener('submit', (e) => {
 			e.preventDefault();
+			console.log('submitted!');
 
 			const newBurger = {
-				name: document.getElementById('burger').value.trim(),
-				devoured: document.getElementById('devoured').checked,
+				burger_name: document.getElementById('burger').value.trim(),
+				devoured: false,
 			};
 
 			fetch('/api/burgers', {
